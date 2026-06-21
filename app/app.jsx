@@ -6,7 +6,7 @@ const newId = () => 'u-' + Date.now().toString(36) + '-' + Math.random().toStrin
 
 function formToRecipe(form, base) {
   const ingredients = form.ingredients.split('\n').map(l => l.trim()).filter(Boolean)
-    .map(l => ({ q: null, u: '', item: l.replace(/^[-•*\u2022·]\s*/, '') }));
+    .map(l => ({ q: null, u: '', item: l.replace(/^[-•*•·]\s*/, '') }));
   const steps = form.steps.split('\n').map(l => l.trim()).filter(Boolean)
     .map(l => l.replace(/^(?:step\s*)?\d+\s*[.):-]\s*/i, ''));
   return {
@@ -62,6 +62,11 @@ function App({ session }) {
   const [pendingImport, setPendingImport] = useState(null);
   const [installEvt, setInstallEvt] = useState(null);
 
+  // Latest book + a dirty flag, so pull-on-focus never clobbers unsaved edits.
+  const dirtyRef = useRef(false);
+  const bookRef = useRef({ recipes, ideas });
+  bookRef.current = { recipes, ideas };
+
   const showToast = (m) => { setToast(m); clearTimeout(window.__tt); window.__tt = setTimeout(() => setToast(''), 2400); };
 
   // ── Cloud sync ────────────────────────────────────────────────
@@ -77,8 +82,8 @@ function App({ session }) {
         setIdeas(Array.isArray(book.ideas) ? book.ideas : []);
         if (book.prefs && book.prefs.units) setSystem(book.prefs.units);
       } else {
-        const seedR = SEED_RECIPES.map(r => ({ ...r }));           // first sign-in → seed the family book
-        const seedI = (typeof SEED_IDEAS !== 'undefined' ? SEED_IDEAS : []).map(i => ({ ...i }));
+        const seedR = (typeof STARTER_RECIPES !== 'undefined' ? STARTER_RECIPES : SEED_RECIPES).map(r => ({ ...r }));   // new account → generic samples, not the family book
+        const seedI = (typeof STARTER_IDEAS !== 'undefined' ? STARTER_IDEAS : []).map(i => ({ ...i }));
         setRecipes(seedR); setIdeas(seedI);
         cloudSaveBook(userId, { recipes: seedR, ideas: seedI, prefs: { units: system } });
       }
@@ -91,9 +96,37 @@ function App({ session }) {
   useEffect(() => {
     if (syncing) return;
     saveCachedBook(userId, { recipes, ideas });
+    dirtyRef.current = true;
     clearTimeout(window.__cloudSave);
-    window.__cloudSave = setTimeout(() => { cloudSaveBook(userId, { recipes, ideas, prefs: { units: system } }); }, 800);
+    window.__cloudSave = setTimeout(async () => {
+      await cloudSaveBook(userId, { recipes, ideas, prefs: { units: system } });
+      dirtyRef.current = false;
+    }, 800);
   }, [recipes, ideas, system, syncing, userId]);
+
+  // Pull-on-focus: when the app regains focus, re-fetch the shared book so a
+  // partner's changes appear. Skips while syncing or when local edits are
+  // pending (dirty), and no-ops when nothing changed — so it never clobbers.
+  useEffect(() => {
+    const pull = async () => {
+      if (document.visibilityState !== 'visible') return;
+      if (syncing || dirtyRef.current) return;
+      const book = await cloudLoadBook(userId);
+      if (!book || !Array.isArray(book.recipes)) return;
+      const incoming = JSON.stringify({ r: book.recipes, i: book.ideas || [] });
+      const current = JSON.stringify({ r: bookRef.current.recipes, i: bookRef.current.ideas });
+      if (incoming === current) return;
+      setRecipes(book.recipes);
+      setIdeas(Array.isArray(book.ideas) ? book.ideas : []);
+      if (book.prefs && book.prefs.units) setSystem(book.prefs.units);
+    };
+    document.addEventListener('visibilitychange', pull);
+    window.addEventListener('focus', pull);
+    return () => {
+      document.removeEventListener('visibilitychange', pull);
+      window.removeEventListener('focus', pull);
+    };
+  }, [syncing, userId]);
 
   // scroll → translucent bars
   useEffect(() => {
@@ -152,7 +185,7 @@ function App({ session }) {
 
   const editRecipe = (r) => go({ name: 'add', editId: r.id });
   const deleteRecipe = (r) => {
-    if (!window.confirm(`Delete “${r.title}”? This can’t be undone.`)) return;
+    if (!window.confirm(`Delete "${r.title}"? This can't be undone.`)) return;
     setRecipes(rs => rs.filter(x => x.id !== r.id));
     home();
     showToast('Recipe deleted');
@@ -162,7 +195,7 @@ function App({ session }) {
     const reader = new FileReader();
     reader.onload = () => {
       const arr = parseBackup(reader.result);
-      if (!arr) { showToast('That file isn’t a valid backup'); return; }
+      if (!arr) { showToast('That file isn't a valid backup'); return; }
       if (!window.confirm(`Replace your library with ${arr.length} recipe(s) from this backup?`)) return;
       setRecipes(arr.map(r => ({ ...r, id: r.id || newId() })));
       home();
@@ -182,7 +215,7 @@ function App({ session }) {
   };
 
   const doInstall = async () => {
-    if (!installEvt) { showToast('Open your browser menu → “Add to Home Screen”'); return; }
+    if (!installEvt) { showToast('Open your browser menu → "Add to Home Screen"'); return; }
     installEvt.prompt();
     try { await installEvt.userChoice; } catch (e) {}
     setInstallEvt(null);

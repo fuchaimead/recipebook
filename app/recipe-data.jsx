@@ -168,7 +168,7 @@ const SEED_RECIPES = [
     ].map(li),
     steps: [
       'Make the panade: in a large bowl, stir together the panko and milk. Let soak 5–10 minutes while you prep the rest.',
-      'Add the beef, pork, garlic, eggs, Parmesan, herbs, onion and Worcestershire to the bowl. Sprinkle the oregano, salt, pepper and red pepper flakes on top. Mix with your hands until just combined — don’t over-mix.',
+      'Add the beef, pork, garlic, eggs, Parmesan, herbs, onion and Worcestershire to the bowl. Sprinkle the oregano, salt, pepper and red pepper flakes on top. Mix with your hands until just combined — don't over-mix.',
       'Optional: cover and chill 1 hour to make the mixture easier to form.',
       'Heat the oven to 425°F and line a rimmed baking sheet with parchment.',
       'Scoop and roll into 2-tablespoon balls (grease your hands with a little olive oil) and place on the sheet.',
@@ -189,7 +189,7 @@ const SEED_RECIPES = [
   {
     id: 'gingerbread', cat: 'desserts', fav: false, title: 'Soft Gingerbread Cookies',
     prep: '', cook: '10 min', yield: '~48 cookies', source: '', blurb: '',
-    notes: 'Makes about 45–50 mid-sized cookies (or ~16 large gingerbread men). Don’t overmix. Bake same-size cookies together. Powdered-sugar icing: 2 cups powdered sugar with 1–2 tbsp lemon juice, water or half-and-half. Dough or baked cookies freeze up to 3 months.',
+    notes: 'Makes about 45–50 mid-sized cookies (or ~16 large gingerbread men). Don't overmix. Bake same-size cookies together. Powdered-sugar icing: 2 cups powdered sugar with 1–2 tbsp lemon juice, water or half-and-half. Dough or baked cookies freeze up to 3 months.',
     ingredients: [
       '1 cup butter, softened', '1 cup light brown sugar', '1 large egg', '1 cup molasses (not blackstrap)',
       '1 tbsp apple cider or white wine vinegar', '2 tsp vanilla extract',
@@ -204,7 +204,7 @@ const SEED_RECIPES = [
       'Cover and chill at least 3 hours or overnight (let it sit 15 minutes at room temperature before rolling if chilled overnight).',
       'Preheat the oven to 350°F. Divide the dough in two and roll each half to ¼-inch thick on a lightly floured surface.',
       'Cut out cookies and place 1 inch apart on lined sheets, keeping similar sizes together.',
-      'Bake: medium cookies 8–10 minutes, large gingerbread men 12–14 minutes, small cookies 6–8 minutes. They should spring back when touched — don’t overbake.',
+      'Bake: medium cookies 8–10 minutes, large gingerbread men 12–14 minutes, small cookies 6–8 minutes. They should spring back when touched — don't overbake.',
       'Cool on the sheet a couple of minutes, then transfer to a rack to cool completely before decorating.',
     ],
   },
@@ -295,7 +295,7 @@ const SEED_RECIPES = [
       'In a large bowl, whisk the flour and salt. Add the yeast, orange zest, cranberries, raisins and nuts and stir to combine. Add the water and stir until all the flour is incorporated.',
       'Cover with plastic wrap and leave at room temperature (about 70°F) for 12–20 hours, until well risen and bubbly on the surface.',
       'Cut a 12-inch square of parchment and coat lightly with cooking spray.',
-      'Turn the dough onto a well-floured surface, sprinkle with more flour, stretch it up and fold over a few times — don’t overwork it.',
+      'Turn the dough onto a well-floured surface, sprinkle with more flour, stretch it up and fold over a few times — don't overwork it.',
       'Shape into a ball by pulling the edges to the middle. Transfer seam-side down to the parchment and coat the surface lightly with spray.',
       'Lift the dough by the parchment corners into a large Dutch oven. Cover loosely and let rise in a warm spot until doubled, about 2 hours.',
       'Dust the top with flour and cut a 6-inch, ½-inch-deep slit. Cover with the lid and put into a cold oven.',
@@ -314,7 +314,7 @@ const SEED_RECIPES = [
       '2 cups (260 g) shredded carrots (about 4 large)', '1 cup (8 oz) crushed pineapple, drained',
       '1 cup (125 g) chopped walnuts',
       'Cream cheese frosting:', '8 oz (226 g) full-fat brick cream cheese, softened',
-      '½ cup (113 g) unsalted butter, softened', '3 cups (360 g) confectioners’ sugar, plus ¼ cup if needed',
+      '½ cup (113 g) unsalted butter, softened', '3 cups (360 g) confectioners' sugar, plus ¼ cup if needed',
       '1 tsp pure vanilla extract', '⅛ tsp salt',
     ].map(li),
     steps: [
@@ -323,14 +323,14 @@ const SEED_RECIPES = [
       'Whisk the oil, both sugars, eggs and vanilla in a medium bowl. Pour into the dry ingredients and whisk until combined. Fold in the carrots, pineapple and walnuts.',
       'Spread the batter into the pan and bake 45–55 minutes, until a toothpick in the center comes out clean. Tent with foil if the top browns too fast.',
       'Cool completely on a rack (after ~45 minutes you can chill it to speed things up).',
-      'Make the frosting: beat the cream cheese and butter on high until smooth. Add the confectioners’ sugar, vanilla and salt; beat on low 30 seconds, then high 2 minutes. Add the extra ¼ cup sugar for a thicker frosting.',
+      'Make the frosting: beat the cream cheese and butter on high until smooth. Add the confectioners' sugar, vanilla and salt; beat on low 30 seconds, then high 2 minutes. Add the extra ¼ cup sugar for a thicker frosting.',
       'Spread over the cooled cake and refrigerate 30 minutes before serving. Store covered in the fridge up to 5 days.',
     ],
   },
   {
     id: 'oatmeal-cranberry', cat: 'desserts', fav: false, title: 'Oatmeal Cranberry Cookies',
     prep: '20 min', cook: '10 min', yield: '36 cookies', source: '', blurb: '',
-    notes: 'Don’t overbake — the middles should still be soft when you pull them out; they firm up as they cool. Use room-temperature eggs. Press a few extra cranberries on top before baking for a prettier look.',
+    notes: 'Don't overbake — the middles should still be soft when you pull them out; they firm up as they cool. Use room-temperature eggs. Press a few extra cranberries on top before baking for a prettier look.',
     ingredients: [
       '1½ cups all-purpose flour (180 g)', '1 tsp baking soda', '1 tsp ground cinnamon', '¾ tsp salt',
       '1 cup unsalted butter, at room temperature (2 sticks)', '1 cup packed light brown sugar (220 g)',
@@ -453,6 +453,16 @@ const SEED_IDEAS = [
   idea('Banana cream pie', 'desserts', ''),
 ];
 
+// Generic sample ideas for brand-new accounts (see STARTER_RECIPES above).
+const STARTER_IDEAS = [
+  idea('Garlic bread', 'breads', ''),
+  idea('Caesar salad', 'appetizers', ''),
+  idea('Spaghetti & meatballs', 'mains', ''),
+  idea('Chicken noodle soup', 'soups', ''),
+  idea('Guacamole', 'appetizers', ''),
+  idea('Apple pie', 'desserts', ''),
+];
+
 // ── Shareable link encode/decode (serverless: recipe rides in the URL) ──
 function b64urlEncode(str) {
   return btoa(unescape(encodeURIComponent(str))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
@@ -480,7 +490,57 @@ function decodeRecipeFromParam(param) {
   } catch (e) { return null; }
 }
 
+// ── Starter set for brand-new accounts ────────────────────────
+// Generic samples shown to a NEW user on first sign-in — deliberately NOT the
+// family book. Existing accounts load from the cloud and never see these.
+const STARTER_RECIPES = [
+  {
+    id: 'starter-banana-bread', cat: 'breads', fav: false, title: 'Banana Bread',
+    prep: '10 min', cook: '55 min', yield: '1 loaf', source: '', blurb: '',
+    notes: 'A sample recipe to show how things look — feel free to edit or delete it.',
+    ingredients: [
+      '3 ripe bananas, mashed', '⅓ cup melted butter', '¾ cup sugar', '1 egg, beaten',
+      '1 tsp vanilla', '1 tsp baking soda', 'Pinch of salt', '1½ cups all-purpose flour',
+    ].map(li),
+    steps: [
+      'Heat the oven to 350°F and butter a 4x8-inch loaf pan.',
+      'Mix the mashed bananas with the melted butter, then stir in the sugar, egg and vanilla.',
+      'Sprinkle the baking soda and salt over the mixture and stir in. Add the flour and mix until just combined.',
+      'Pour into the pan and bake about 55 minutes, until a toothpick comes out clean. Cool before slicing.',
+    ],
+  },
+  {
+    id: 'starter-tomato-soup', cat: 'soups', fav: false, title: 'Tomato Basil Soup',
+    prep: '10 min', cook: '25 min', yield: 'Serves 4', source: '', blurb: '',
+    notes: 'A sample recipe — swap in your own favorites anytime.',
+    ingredients: [
+      '2 tbsp olive oil', '1 onion, diced', '2 cloves garlic, minced',
+      '2 (14 oz) cans crushed tomatoes', '2 cups vegetable broth',
+      'Handful of fresh basil', 'Salt and pepper', 'Splash of cream (optional)',
+    ].map(li),
+    steps: [
+      'Warm the oil in a pot over medium heat. Cook the onion until soft, about 5 minutes, then add the garlic for 30 seconds.',
+      'Add the tomatoes and broth. Simmer for 20 minutes.',
+      'Blend smooth, stir in the basil and season with salt and pepper. Add a splash of cream if you like.',
+    ],
+  },
+  {
+    id: 'starter-choc-chip', cat: 'desserts', fav: false, title: 'Chocolate Chip Cookies',
+    prep: '15 min', cook: '11 min', yield: 'About 24 cookies', source: '', blurb: '',
+    notes: 'A sample recipe to get you started.',
+    ingredients: [
+      '1 cup butter, softened', '¾ cup sugar', '¾ cup brown sugar', '2 eggs', '1 tsp vanilla',
+      '2¼ cups all-purpose flour', '1 tsp baking soda', '½ tsp salt', '2 cups chocolate chips',
+    ].map(li),
+    steps: [
+      'Heat the oven to 375°F. Cream the butter with both sugars until fluffy, then beat in the eggs and vanilla.',
+      'Stir together the flour, baking soda and salt, then mix into the wet ingredients. Fold in the chocolate chips.',
+      'Drop rounded tablespoons onto baking sheets and bake 9–11 minutes, until the edges are golden.',
+    ],
+  },
+];
+
 Object.assign(window, {
-  CATEGORIES, SEED_RECIPES, SEED_IDEAS, convertIng, fmtIng, recipeToText,
+  CATEGORIES, SEED_RECIPES, SEED_IDEAS, STARTER_RECIPES, STARTER_IDEAS, convertIng, fmtIng, recipeToText,
   ingredientsToText, convertText, fmtMeta, encodeRecipeToParam, decodeRecipeFromParam,
 });
