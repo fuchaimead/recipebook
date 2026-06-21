@@ -195,7 +195,7 @@ function App({ session }) {
     const reader = new FileReader();
     reader.onload = () => {
       const arr = parseBackup(reader.result);
-      if (!arr) { showToast('That file isn't a valid backup'); return; }
+      if (!arr) { showToast('That file isn\'t a valid backup'); return; }
       if (!window.confirm(`Replace your library with ${arr.length} recipe(s) from this backup?`)) return;
       setRecipes(arr.map(r => ({ ...r, id: r.id || newId() })));
       home();

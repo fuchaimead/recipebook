@@ -168,7 +168,7 @@ const SEED_RECIPES = [
     ].map(li),
     steps: [
       'Make the panade: in a large bowl, stir together the panko and milk. Let soak 5–10 minutes while you prep the rest.',
-      'Add the beef, pork, garlic, eggs, Parmesan, herbs, onion and Worcestershire to the bowl. Sprinkle the oregano, salt, pepper and red pepper flakes on top. Mix with your hands until just combined — don't over-mix.',
+      'Add the beef, pork, garlic, eggs, Parmesan, herbs, onion and Worcestershire to the bowl. Sprinkle the oregano, salt, pepper and red pepper flakes on top. Mix with your hands until just combined — don\'t over-mix.',
       'Optional: cover and chill 1 hour to make the mixture easier to form.',
       'Heat the oven to 425°F and line a rimmed baking sheet with parchment.',
       'Scoop and roll into 2-tablespoon balls (grease your hands with a little olive oil) and place on the sheet.',
@@ -189,7 +189,7 @@ const SEED_RECIPES = [
   {
     id: 'gingerbread', cat: 'desserts', fav: false, title: 'Soft Gingerbread Cookies',
     prep: '', cook: '10 min', yield: '~48 cookies', source: '', blurb: '',
-    notes: 'Makes about 45–50 mid-sized cookies (or ~16 large gingerbread men). Don't overmix. Bake same-size cookies together. Powdered-sugar icing: 2 cups powdered sugar with 1–2 tbsp lemon juice, water or half-and-half. Dough or baked cookies freeze up to 3 months.',
+    notes: 'Makes about 45–50 mid-sized cookies (or ~16 large gingerbread men). Don\'t overmix. Bake same-size cookies together. Powdered-sugar icing: 2 cups powdered sugar with 1–2 tbsp lemon juice, water or half-and-half. Dough or baked cookies freeze up to 3 months.',
     ingredients: [
       '1 cup butter, softened', '1 cup light brown sugar', '1 large egg', '1 cup molasses (not blackstrap)',
       '1 tbsp apple cider or white wine vinegar', '2 tsp vanilla extract',
@@ -204,7 +204,7 @@ const SEED_RECIPES = [
       'Cover and chill at least 3 hours or overnight (let it sit 15 minutes at room temperature before rolling if chilled overnight).',
       'Preheat the oven to 350°F. Divide the dough in two and roll each half to ¼-inch thick on a lightly floured surface.',
       'Cut out cookies and place 1 inch apart on lined sheets, keeping similar sizes together.',
-      'Bake: medium cookies 8–10 minutes, large gingerbread men 12–14 minutes, small cookies 6–8 minutes. They should spring back when touched — don't overbake.',
+      'Bake: medium cookies 8–10 minutes, large gingerbread men 12–14 minutes, small cookies 6–8 minutes. They should spring back when touched — don\'t overbake.',
       'Cool on the sheet a couple of minutes, then transfer to a rack to cool completely before decorating.',
     ],
   },
@@ -295,7 +295,7 @@ const SEED_RECIPES = [
       'In a large bowl, whisk the flour and salt. Add the yeast, orange zest, cranberries, raisins and nuts and stir to combine. Add the water and stir until all the flour is incorporated.',
       'Cover with plastic wrap and leave at room temperature (about 70°F) for 12–20 hours, until well risen and bubbly on the surface.',
       'Cut a 12-inch square of parchment and coat lightly with cooking spray.',
-      'Turn the dough onto a well-floured surface, sprinkle with more flour, stretch it up and fold over a few times — don't overwork it.',
+      'Turn the dough onto a well-floured surface, sprinkle with more flour, stretch it up and fold over a few times — don\'t overwork it.',
       'Shape into a ball by pulling the edges to the middle. Transfer seam-side down to the parchment and coat the surface lightly with spray.',
       'Lift the dough by the parchment corners into a large Dutch oven. Cover loosely and let rise in a warm spot until doubled, about 2 hours.',
       'Dust the top with flour and cut a 6-inch, ½-inch-deep slit. Cover with the lid and put into a cold oven.',
@@ -314,7 +314,7 @@ const SEED_RECIPES = [
       '2 cups (260 g) shredded carrots (about 4 large)', '1 cup (8 oz) crushed pineapple, drained',
       '1 cup (125 g) chopped walnuts',
       'Cream cheese frosting:', '8 oz (226 g) full-fat brick cream cheese, softened',
-      '½ cup (113 g) unsalted butter, softened', '3 cups (360 g) confectioners' sugar, plus ¼ cup if needed',
+      '½ cup (113 g) unsalted butter, softened', '3 cups (360 g) confectioners\' sugar, plus ¼ cup if needed',
       '1 tsp pure vanilla extract', '⅛ tsp salt',
     ].map(li),
     steps: [
@@ -323,14 +323,14 @@ const SEED_RECIPES = [
       'Whisk the oil, both sugars, eggs and vanilla in a medium bowl. Pour into the dry ingredients and whisk until combined. Fold in the carrots, pineapple and walnuts.',
       'Spread the batter into the pan and bake 45–55 minutes, until a toothpick in the center comes out clean. Tent with foil if the top browns too fast.',
       'Cool completely on a rack (after ~45 minutes you can chill it to speed things up).',
-      'Make the frosting: beat the cream cheese and butter on high until smooth. Add the confectioners' sugar, vanilla and salt; beat on low 30 seconds, then high 2 minutes. Add the extra ¼ cup sugar for a thicker frosting.',
+      'Make the frosting: beat the cream cheese and butter on high until smooth. Add the confectioners\' sugar, vanilla and salt; beat on low 30 seconds, then high 2 minutes. Add the extra ¼ cup sugar for a thicker frosting.',
       'Spread over the cooled cake and refrigerate 30 minutes before serving. Store covered in the fridge up to 5 days.',
     ],
   },
   {
     id: 'oatmeal-cranberry', cat: 'desserts', fav: false, title: 'Oatmeal Cranberry Cookies',
     prep: '20 min', cook: '10 min', yield: '36 cookies', source: '', blurb: '',
-    notes: 'Don't overbake — the middles should still be soft when you pull them out; they firm up as they cool. Use room-temperature eggs. Press a few extra cranberries on top before baking for a prettier look.',
+    notes: 'Don\'t overbake — the middles should still be soft when you pull them out; they firm up as they cool. Use room-temperature eggs. Press a few extra cranberries on top before baking for a prettier look.',
     ingredients: [
       '1½ cups all-purpose flour (180 g)', '1 tsp baking soda', '1 tsp ground cinnamon', '¾ tsp salt',
       '1 cup unsalted butter, at room temperature (2 sticks)', '1 cup packed light brown sugar (220 g)',
